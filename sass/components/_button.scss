@@ -3,26 +3,35 @@ button {
     border-radius: 0%;
     border: none;
     border-radius: 10px;
-    color: $text-color-dark;
-    padding: 5px 10px;
+    color: $text-color;
+    padding: 7px 12px;
     margin: 5px;
-    font-size: 14px;
+    font-size: 16px;
+
     
     
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     &:hover {
-        background-color: $primary-color;
-        color: white;
+        translate: -1px -1px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: $secondary-color;
     }
-    &:active {
-        background-color: $primary-color;
-        color: white;
-    }
+   
 
 }
 button.toDoButton {
     padding: 10px 20px;
     font-size: 16px;
     text-transform: uppercase;
+}
+
+button.remove-btn {
+    background-color: transparent;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    &:hover {
+    border: 1px solid $primary-color;
+}
 }

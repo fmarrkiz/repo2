@@ -1,7 +1,8 @@
+@charset "UTF-8";
 header {
   display: flex;
   justify-content: space-evenly;
-  background-color: #E08E6D;
+  background-color: #F6C391;
   padding: 5px 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -41,7 +42,7 @@ input {
 }
 
 input:focus {
-  border-color: #F6C391;
+  border-color: #E08E6D;
   background-color: #f8f9ff;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
@@ -58,40 +59,62 @@ input::placeholder {
 }
 
 li {
-  color: #03071e;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  margin: 5px 0;
+  gap: 10px;
+  align-items: center;
+  color: #370617;
+}
+
+li::before {
+  content: "•";
+  position: relative;
+  left: 0;
+  color: #370617;
+  font-size: 1.2em;
+  margin-right: 10px;
 }
 
 span {
-  color: #03071e;
+  color: #370617;
   font-size: 16px;
   font-weight: bold;
 }
 
 button {
-  background-color: #E08E6D;
+  background-color: #F6C391;
   border-radius: 0%;
   border: none;
   border-radius: 10px;
-  color: #03071e;
-  padding: 5px 10px;
+  color: #370617;
+  padding: 7px 12px;
   margin: 5px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 button:hover {
-  background-color: #D25380;
-  color: white;
-}
-button:active {
-  background-color: #D25380;
-  color: white;
+  translate: -1px -1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #F6C391;
 }
 
 button.toDoButton {
   padding: 10px 20px;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+button.remove-btn {
+  background-color: transparent;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+button.remove-btn:hover {
+  border: 1px solid #d2535e;
 }
 
 * {

@@ -62,6 +62,16 @@ NewItem.appendChild(quantity);
         addQuantity(NewItem, quantity);
     });
 
+    let removeButton = document.createElement("button");
+    removeButton.innerHTML = "&#128465;";
+    removeButton.classList.add("remove-btn");
+    buttonContainer.appendChild(removeButton);
+    
+    removeButton.addEventListener("click", function () {
+        ToDoList.removeChild(NewItem);
+    });
+
+
 ToDoList.appendChild(NewItem);
 }
 
