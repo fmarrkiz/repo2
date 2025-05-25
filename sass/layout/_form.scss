@@ -1,0 +1,33 @@
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    float: center;
+}
+
+input {
+  padding: 5px 10px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+input:focus {
+  border-color: #007bff;
+  background-color: #f8f9ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+input::placeholder {
+  color: #6c757d;
+  font-weight: 400;
+}

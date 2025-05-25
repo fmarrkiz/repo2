@@ -12,61 +12,66 @@ toDoInput.addEventListener("keypress", function (e) {
     }
 }
 ); 
-  
-
 
 function addToDoTask (event) {
 event.preventDefault();
 
 let inputValue = toDoInput.value.trim();
 if (inputValue === "") {
-    alert ("Pense à vérifier ta liste avant de partir!");
+    alert ("Pense à compléter ta liste avant de partir!");
 } else {
-    
-    let NewItem = document.createElement("li");
-    NewItem.innerText = inputValue;
-    NewItem.classList.add("toDo-item");
-    ToDoList.appendChild(NewItem);
-    
-    let TaskQuantity = 1;
-    let quantity = document.createElement("span");
-    quantity.classList.add("quantity");
-    quantity.innerText = `x${TaskQuantity}`;
-    quantity.style.display ="none";
-    NewItem.appendChild(quantity);
+    createToDoItem(inputValue, 1);
 
-    let buttonContainer = document.createElement("div");
+    toDoInput.value = "";
+    toDoInput.focus();
+       }
+}
+
+function createToDoItem(inputValue){
+
+let NewItem = document.createElement("li");
+NewItem.textContent = inputValue;
+NewItem.classList.add("toDo-item");
+
+let itemQuantity = 1;
+let quantity = document.createElement("span");
+quantity.classList.add("quantity");
+quantity.textContent = ` x${itemQuantity}`;
+quantity.style.display = itemQuantity > 1 ? "inline" : "none"; 
+NewItem.appendChild(quantity);
+
+   let buttonContainer = document.createElement("div");
     buttonContainer.classList.add("button-container");
     NewItem.appendChild(buttonContainer);
 
-    let deleteButton = document.createElement("button");
+   let deleteButton = document.createElement("button");
     deleteButton.innerHTML = "&#8722;";
     deleteButton.classList.add("delete-btn");
     buttonContainer.appendChild(deleteButton);
-
-    let addButton = document.createElement("button");
-    addButton.innerHTML = "&#43;";
-    addButton.classList.add("add-btn");
-    buttonContainer.appendChild(addButton);
 
     deleteButton.addEventListener("click",function () {
         deleteQuantity(NewItem, quantity);
     });
 
+   let addButton = document.createElement("button");
+    addButton.innerHTML = "&#43;";
+    addButton.classList.add("add-btn");
+    buttonContainer.appendChild(addButton);
+
     addButton.addEventListener("click", function () {
         addQuantity(NewItem, quantity);
     });
 
-    toDoInput.value = "";
-    toDoInput.focus();
-       }
-} 
+ToDoList.appendChild(NewItem);
+}
+
 
 function deleteQuantity(NewItem, quantity) {
     let currentQuantity = parseInt(quantity.innerText.replace("x", ""));
    if (currentQuantity > 1) {
         currentQuantity--;
-        quantity.innerText = `x${currentQuantity}`; 
+        quantity.innerText = ` x${currentQuantity}`; 
+        quantity.style.display = currentQuantity > 1 ? "inline" : "none";
       } else {
         ToDoList.removeChild(NewItem);
 }
@@ -75,9 +80,8 @@ function deleteQuantity(NewItem, quantity) {
 function addQuantity(NewItem, quantity) {
 let currentQuantity = parseInt(quantity.innerText.replace("x", ""));
 currentQuantity++;
-quantity.innerText = `x${currentQuantity}`;
+quantity.innerText = ` x${currentQuantity}`;
 quantity.style.display ="inline";
 
 }
     
-
