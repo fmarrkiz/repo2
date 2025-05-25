@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: space-evenly;
-  background-color: #f8f9fa;
+  background-color: #E08E6D;
   padding: 5px 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -30,7 +30,7 @@ form {
 }
 
 input {
-  padding: 5px 10px;
+  padding: 10px 10px;
   border: 2px solid #e9ecef;
   border-radius: 8px;
   font-size: 16px;
@@ -41,7 +41,7 @@ input {
 }
 
 input:focus {
-  border-color: #007bff;
+  border-color: #F6C391;
   background-color: #f8f9ff;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
@@ -57,19 +57,22 @@ input::placeholder {
   font-weight: 400;
 }
 
+li {
+  color: #03071e;
+}
+
 span {
-  color: #333;
+  color: #03071e;
   font-size: 16px;
   font-weight: bold;
 }
 
 button {
-  background-color: rgb(237, 161, 68);
-  background-image: radial-gradient(circle, rgb(237, 161, 68) 0%, rgb(255, 255, 255) 100%);
+  background-color: #E08E6D;
   border-radius: 0%;
   border: none;
   border-radius: 10px;
-  color: rgb(23, 22, 21);
+  color: #03071e;
   padding: 5px 10px;
   margin: 5px;
   font-size: 14px;
@@ -77,12 +80,18 @@ button {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 button:hover {
-  background-color: rgb(122, 84, 18);
+  background-color: #D25380;
   color: white;
 }
 button:active {
-  background-color: rgb(100, 70, 15);
+  background-color: #D25380;
   color: white;
+}
+
+button.toDoButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 * {
@@ -90,8 +99,8 @@ button:active {
 }
 
 body {
-  background-color: #fff1dc;
-  color: #2f2057;
+  background-color: #FFFAF4;
+  color: #370617;
   margin: 0;
   padding: 20px;
 }
