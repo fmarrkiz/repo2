@@ -41,3 +41,19 @@ This project is built using fundamental web technologies:
 * Remove Items: Click the trash can icon (🗑️) to completely remove an item from your list.
 
 * Visual Feedback: The application provides alerts for empty inputs and smooth hover effects for better user experience.
+
+## Future Enhancements
+
+* Local Storage: Persist shopping list items between browser sessions.
+
+* Categories: Organize items by grocery categories (produce, dairy, etc.).
+
+* Search/Filter: Add functionality to search through items or filter by category.
+
+* Export Options: Allow users to export their list as text or PDF.
+
+* Dark Mode: Implement a toggle for dark/light theme preferences.
+
+* Drag & Drop: Enable reordering of list items through drag and drop.
+
+* Shopping Mode: Add a "check off" mode for items while shopping.
